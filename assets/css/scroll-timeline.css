@@ -1,0 +1,132 @@
+.timeline {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.timeline>* {
+    display: none;
+}
+
+.timeline>.t-head,
+.timeline>.t-events {
+    display: block;
+}
+
+.timeline .t-head .t-tag {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    text-align: right;
+    font-size: 1rem;
+    color: #79838c;
+}
+
+.timeline .t-head .t-tag h1 {
+    font-size: 1.5rem;
+}
+
+.timeline .t-head,
+.timeline .t-events {
+    padding-bottom: 2.25rem;
+}
+
+
+/* .timeline .t-head:first-of-type,
+.timeline .t-events:first-of-type {
+    padding-top: 2rem;
+} */
+
+.timeline .t-head:last-of-type,
+.timeline .t-events:last-of-type {
+    padding-bottom: 0;
+}
+
+.timeline .t-events .t-event:last-of-type {
+    margin-bottom: 0;
+}
+
+.timeline .t-head:first-of-type .t-tag {
+    top: 0;
+}
+
+.timeline .t-head:first-of-type .t-tag h1 {
+    font-size: 1.75rem;
+}
+
+.timeline .t-events {
+    border-left: solid 0.25rem #3f5ca3;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.timeline .t-events .t-event {
+    margin-bottom: 0.75rem;
+}
+
+.timeline .t-events .t-event::before {
+    content: '';
+    width: 1.15rem;
+    height: 1.15rem;
+    background: #fff;
+    border: solid 2px #3f5ca3;
+    border-radius: 50%;
+    position: absolute;
+    left: -0.75rem;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3f5ca3;
+    font-weight: 800;
+}
+
+.timeline.top-prograssive {
+    padding-top: 2rem;
+}
+
+.timeline.top-prograssive .t-events:nth-of-type(2)::before {
+    content: '';
+    height: 1.5rem;
+    position: absolute;
+    left: -0.25rem;
+    top: -1.5rem;
+    border-left: dotted 0.25rem #3f5ca3;
+}
+
+.pub-type {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.pub-type>.header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 0.65rem 0 0.65rem 2rem;
+    margin-bottom: 0.65rem;
+    background: #fff;
+    /* border-bottom: 1px solid #666; */
+    z-index: 10;
+    font-size: 1.65rem;
+}
+
+.pub-type>.header::before {
+    content: '';
+    width: 1.15rem;
+    height: 1.15rem;
+    background: #fff;
+    border: double 6px #3f5ca3;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 0.625rem);
+    left: 0;
+}
+
+.pub-type>.content {
+    /* height: 500px; */
+}
+
+.publications .timeline .t-events .t-event {
+    text-align: justify;
+}
